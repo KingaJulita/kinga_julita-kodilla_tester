@@ -13,4 +13,14 @@ public class Grades {
         this.grades[this.size] = value;
         this.size++;
     }
+    public double averageGrades(Grades[] value) {
+        int sumGrades = 0;
+        for( int i = 0; i < grades.length; i++ ) {
+            sumGrades = sumGrades + grades[i];
+        }
+        return (double) sumGrades/grades.length;
+    }
+    int numberOfElements = grades.length; {
+        System.out.println(numberOfElements);
+    };
 }
