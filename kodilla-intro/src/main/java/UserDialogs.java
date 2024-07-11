@@ -45,12 +45,7 @@ public class UserDialogs {
         while (true) {
             System.out.println("Select color (C - color):");
             String color = scanner.nextLine().trim().toUpperCase();
-            switch (color) {
-                case "C":
-                    return "COLOR";
-                default:
-                    System.out.println("Wrong color. Try again.");
-            }
+           return color;
         }
     }
 
