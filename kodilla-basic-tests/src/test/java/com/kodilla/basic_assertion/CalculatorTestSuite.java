@@ -20,7 +20,13 @@ public class CalculatorTestSuite {
         int a = 5;
         int b = 8;
         int subtractResult = calculator.subtract(a, b);
-        assertEquals(-3, subtractResult, 0.01);
+        assertEquals(-3, subtractResult);
     }
-
+    @Test
+    public void testPow() {
+        Calculator calculator = new Calculator();
+        int a = 5;
+        int powResult = calculator.pow(a);
+        assertEquals(25,powResult,0.01);
+    }
 }
