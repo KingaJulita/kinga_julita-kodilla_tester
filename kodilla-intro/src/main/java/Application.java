@@ -4,6 +4,6 @@ public class Application {
         double age = 40.5;
         double height = 178;
 
-        System.out.println("The user's name is " + name + " he is " + age + " years old and " + height +" tall.");
+
     }
 }
