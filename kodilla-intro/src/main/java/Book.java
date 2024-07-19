@@ -8,14 +8,20 @@ public class Book {
         this.title = title;
 
     }
-    public  String getBook() {
-        Book book = new Book(this.author, this.title);
+    public static Book of(String author, String title) {
+        return new Book(author, title);
+    }
 
-            System.out.println("Enter author name: ");
-            String author = null;
-            System.out.println("Enter title book:");
-            String title = null;
+    public String getAuthor() {
+        return author;
+    }
 
-        return null;
+    public String getTitle() {
+        return title;
+    }
+
+    public static void main(String[] args) {
+        Book book = Book.of("Henryk Sienkiewicz", "Ogniem i mieczem");
+        System.out.println("Autorem książki " + book.getTitle() + " jest " + book.getAuthor());
     }
 }
