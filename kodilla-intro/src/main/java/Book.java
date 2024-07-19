@@ -10,6 +10,7 @@ public class Book {
     }
     public  String getBook() {
         Book book = new Book(this.author, this.title);
+
             System.out.println("Enter author name: ");
             String author = null;
             System.out.println("Enter title book:");
