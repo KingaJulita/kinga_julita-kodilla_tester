@@ -6,10 +6,10 @@ import java.util.Map;
 public class AirportRepository {
     private Map<String, Boolean> getListOfAirports() {
         Map<String, Boolean> airports = new HashMap<>();
-        airports.put("Miami " , true);
-        airports.put("Malta ", true);
-        airports.put("LasPalmas ", false);
-        airports.put("Warsaw ", true);
+        airports.put("Miami" , true);
+        airports.put("Malta", true);
+        airports.put("LasPalmas", false);
+        airports.put("Warsaw", true);
         return airports;
     }
 
