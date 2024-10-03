@@ -111,7 +111,7 @@ class DbManagerTestSuite {
         }
 
         //Then
-        Assertions.assertTrue(counter > 0);
+        Assertions.assertEquals(1, counter);
 
         rs.close();
         statement.close();
