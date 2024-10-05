@@ -54,5 +54,5 @@ public class UserDialogs {
             C, /*Czarny*/
             H, /*Hebanowy*/
             P, /*Popielaty*/
-    };
+    }
 }

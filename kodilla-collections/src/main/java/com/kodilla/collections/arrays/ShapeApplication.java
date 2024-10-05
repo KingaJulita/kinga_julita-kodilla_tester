@@ -19,7 +19,7 @@ public class ShapeApplication {
             ShapeUtils.displayShapeInfo(shape);
     }
 
-    private static Shape drawShape() {
+    public static Shape drawShape() {
         int drawnShapeKind = RANDOM.nextInt(3);
         double a = getRandomSize();
         if (drawnShapeKind == 0)

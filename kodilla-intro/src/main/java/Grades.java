@@ -22,5 +22,5 @@ public class Grades {
     }
     int numberOfElements = grades.length; {
         System.out.println(numberOfElements);
-    };
+    }
 }

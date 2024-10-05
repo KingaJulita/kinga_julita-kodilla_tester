@@ -72,4 +72,44 @@ public class WeatherAlertServiceTestSuite {
 
         Mockito.verify(person, never()).receive(weatherAlert);
     }
+
+    @Test
+    public void shouldSendAlertToSubscriberSubscribedToMultipleLocations() {
+
+        service.addSubscriber(person, location);
+        service.addSubscriber(person, location2);
+
+        service.sendAlertToLocation(location, weatherAlert);
+        service.sendAlertToLocation(location2, weatherAlert);
+
+        Mockito.verify(person, times(2)).receive(weatherAlert);
+    }
+
+    @Test
+    public void shouldHandleRemovingLocationWithNoSubscribers() {
+
+        service.removeLocation(location);
+
+        service.sendAlertToLocation(location, weatherAlert);
+
+        Mockito.verify(person, never()).receive(weatherAlert);
+    }
+    @Test
+    public void shouldNotDuplicateSubscriberInSameLocation() {
+
+        service.addSubscriber(person, location);
+        service.addSubscriber(person, location);
+
+        service.sendAlertToLocation(location, weatherAlert);
+
+        Mockito.verify(person, times(1)).receive(weatherAlert);
+    }
+    @Test
+    public void shouldNotSendAlertToNonExistentLocation() {
+
+        service.sendAlertToLocation(location, weatherAlert);
+
+        Mockito.verify(person, never()).receive(weatherAlert);
+    }
+
 }
